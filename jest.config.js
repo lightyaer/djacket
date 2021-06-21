@@ -3,4 +3,10 @@ module.exports = {
   transform: {
     "^.+\\.vue$": "vue-jest",
   },
+  clearMocks: true,
+  displayName: {
+    name: "djacket",
+    color: "red",
+  },
+  testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"],
 };

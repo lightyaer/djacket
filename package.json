@@ -2,20 +2,42 @@
   "name": "djacket",
   "version": "0.1.0",
   "private": true,
+  "repository": "lightyaer/djacket",
+  "homepage": "https://github.com/lightyaer/djacket#readme",
+  "bugs": "https://github.com/lightyaer/djacket/issues",
+  "author": {
+    "email": "lightyaer@gmail.com",
+    "name": "Dhananjay Naik"
+  },
+  "engines": {
+    "node": "14.17.x",
+    "npm": "6.14"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "generate:component": "sh hygen/generate.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "date-fns": "^2.22.1",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue-shortkey": "^3.1.7",
+    "vue-types": "3",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/vue3": "^6.2.9",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-pwa": "~4.5.0",
@@ -27,21 +49,25 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^2.0.0-0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^6.7.2",
+    "eslint-plugin-jsdoc": "^35.3.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "hygen": "^6.1.0",
     "lint-staged": "^9.5.0",
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
-    "vue-jest": "^5.0.0-0"
+    "vue-jest": "^5.0.0-0",
+    "vue-loader": "^15.9.7"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,vue}": [
+    "*.{js,vue}": [
       "vue-cli-service lint",
       "git add"
     ]

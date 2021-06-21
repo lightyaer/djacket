@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Jost";
+  src: url("jost-variablefont_wght-webfont.woff2") format("woff2"),
+    url("jost-variablefont_wght-webfont.woff") format("woff"),
+    url("jost-variablefont_wght-webfont.ttf") format("truetype"),
+    url("jost-variablefont_wght-webfont.svg#jostregular") format("svg");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("worksans-variablefont_wght-webfont.woff2") format("woff2"),
+    url("worksans-variablefont_wght-webfont.woff") format("woff"),
+    url("worksans-variablefont_wght-webfont.ttf") format("truetype"),
+    url("worksans-variablefont_wght-webfont.svg#work_sansregular") format("svg");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("karla-variablefont_wght-webfont.woff2") format("woff2"),
+    url("karla-variablefont_wght-webfont.woff") format("woff"),
+    url("karla-variablefont_wght-webfont.ttf") format("truetype"),
+    url("karla-variablefont_wght-webfont.svg#karlaregular") format("svg");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("archivo-variablefont_wdthwght-webfont.woff2") format("woff2"),
+    url("archivo-variablefont_wdthwght-webfont.woff") format("woff"),
+    url("archivo-variablefont_wdthwght-webfont.ttf") format("truetype"),
+    url("archivo-variablefont_wdthwght-webfont.svg#archivosemibold")
+      format("svg");
+  font-weight: 400;
+  font-stretch: 100%;
+}
+
+@font-face {
+  font-family: "Asap";
+  src: url("asap-variablefont_wght-webfont.woff2") format("woff2"),
+    url("asap-variablefont_wght-webfont.woff") format("woff"),
+    url("asap-variablefont_wght-webfont.ttf") format("truetype"),
+    url("asap-variablefont_wght-webfont.svg#asapregular") format("svg");
+  font-weight: 400;
+}
