@@ -1,5 +1,7 @@
 # djacket
 
+### A Jacket for your vue app
+
 ## Project setup
 ```
 yarn install

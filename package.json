@@ -1,7 +1,6 @@
 {
   "name": "djacket",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
   "repository": "lightyaer/djacket",
   "homepage": "https://github.com/lightyaer/djacket#readme",
   "bugs": "https://github.com/lightyaer/djacket/issues",
