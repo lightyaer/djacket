@@ -1,0 +1,49 @@
+@import "../../styles/typography/_typography";
+
+$_align_variants: [ "left", "center", "right" ];
+$_display_variants: [ "inline", "block", "inline-flex", "inline-block" ];
+
+@include responsive(dj-text) {
+  font-family: $_dj-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+@each $text in $_text_variants {
+  @include responsive(dj-text--variant-#{$text}) {
+    font-size: map-get($_text-sizes, $text);
+    line-height: map-get($_text-heights, $text);
+    letter-spacing: map-get($_text-spaces, $text);
+    font-weight: map-get($_text-weights, $text);
+  }
+}
+
+@each $color_name, $color in $_text_colors {
+  @include responsive(dj-text--color-#{$color_name}) {
+    color: #{$color};
+  }
+}
+
+@each $align_variant in $_align_variants {
+  @include responsive(dj-text-align-#{$align_variant}) {
+    text-align: #{$align_variant};
+  }
+}
+
+@each $display_variant in $_display_variants {
+  @include responsive(dj-text-display-#{$display_variant}) {
+    display: #{$display_variant};
+  }
+}
+
+@include responsive(dj-text--truncate) {
+  @include truncate(100%);
+}
+
+@include responsive(dj-text--underline) {
+  text-decoration: underline;
+}
+
+@include responsive(dj-text-no-height) {
+  line-height: 1;
+}

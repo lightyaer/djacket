@@ -1,10 +1,32 @@
-import { string, oneOf, bool } from "vue-types";
-
+import responsivePropValidator from "../utils/responsivePropValidator";
+import { ALIGN, WRAP, DIRECTION, JUSTIFY } from "./FLEX_VALUES_ENUM";
 export default () => ({
-  wrap: string.def("nowrap"),
-  direction: oneOf(["row", "column"]).def("row"),
-  align: oneOf(["start", "center", "end"]),
-  justify: oneOf(["start", "end", "center", "between", "around", "evenly"]),
-  noShrink: bool.def(false),
-  grow: bool.def(false),
+  wrap: {
+    type: [Object, String],
+    default: "initial",
+    validator: responsivePropValidator(WRAP),
+  },
+  direction: {
+    type: String,
+    default: "row",
+    validator: responsivePropValidator(DIRECTION),
+  },
+  align: {
+    type: String,
+    default: "start",
+    validator: responsivePropValidator(ALIGN),
+  },
+  justify: {
+    type: String,
+    default: "start",
+    validator: responsivePropValidator(JUSTIFY),
+  },
+  grow: {
+    type: Boolean,
+    default: false,
+  },
+  shrink: {
+    type: Boolean,
+    default: false,
+  },
 });

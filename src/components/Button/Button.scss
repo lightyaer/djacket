@@ -1,0 +1,56 @@
+@import "../../styles/responsive/_responsive";
+@import "../../styles/spacing/_spacing";
+@import "../../styles/colors/_colors";
+
+@include responsive(dj-button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  white-space: normal;
+  border-radius: $_dj-base-border-radius;
+  cursor: pointer;
+  border: none;
+  color: $_white-color;
+  outline: none;
+  transition: all 250ms ease-in;
+}
+
+$_button_colors: (
+  primary: $_primary-color,
+  secondary: $_secondary-color,
+  positive: $_positive-color,
+  negative: $_negative-color,
+  info: $_info-color,
+  white: $_white-color,
+  black: $_black-color,
+);
+
+$_button-sizes: (
+  "small": 0.1rem 0.4rem,
+  "default": 0.2rem 0.8rem,
+  "large": 0.4rem 1rem,
+);
+
+$_button-types: [ "contained", "outlined", "text" ];
+
+@each $color_name, $color in $_button_colors {
+  @include responsive(dj-button--color-#{$color_name}) {
+    background: #{$color};
+  }
+}
+
+@each $size_name, $size in $_button-sizes {
+  @include responsive(dj-button--size-#{$size_name}) {
+    padding: $size;
+  }
+}
+
+@each $type in $_button-types {
+  @include responsive(dj-button--type-#{$type}) {
+  }
+}
+
+@include responsive(dj-button--disabled) {
+  cursor: not-allowed;
+}

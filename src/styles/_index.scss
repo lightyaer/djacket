@@ -1,11 +1,16 @@
 @import "animation/_animation";
 @import "background/_background";
 @import "colors/_colors";
-@import "media-queries/_media-queries";
+@import "responsive/responsive";
 @import "position/_position";
 @import "pseudo/_pseudo";
 @import "spacing/_spacing";
-@import "text/_text";
+@import "typography/typography";
 @import "vendor/_vendor";
+@import "reset/_reset";
 
-
+body {
+  font-family: $_dj-font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

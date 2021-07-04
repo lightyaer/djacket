@@ -1,9 +1,25 @@
-<template>
-  <div />
-</template>
 <script>
 export default {
   name: "Select",
-  props: {},
+  props: {
+    multi: {
+      type: Boolean,
+      default: false,
+    },
+  },
 };
 </script>
+
+<template>
+  <div>
+    <div>
+      <!--      input-->
+    </div>
+    <div>
+      <!--      selected-->
+    </div>
+    <div>
+      <!--      list-->
+    </div>
+  </div>
+</template>

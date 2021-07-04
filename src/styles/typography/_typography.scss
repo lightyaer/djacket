@@ -1,0 +1,72 @@
+@import "../responsive/_responsive";
+@import "../colors/_colors";
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+$_dj-font-family: Merriweather Sans, san-serif;
+
+$_text_variants: [ "hint", "default", "subtitle", "heading", "title" ];
+
+$_text_colors: (
+  primary: $_primary-color,
+  secondary: $_secondary-color,
+  positive: $_positive-color,
+  negative: $_negative-color,
+  info: $_info-color,
+  white: $_white-color,
+  black: $_black-color,
+);
+
+$_text-sizes: (
+  hint: 0.8rem,
+  default: 1rem,
+  subtitle: 1.2rem,
+  heading: 1.6rem,
+  title: 2.5rem,
+);
+
+$_text-spaces: (
+  hint: 0.06rem,
+  default: 0,
+  subtitle: 0,
+  heading: 0,
+  title: 0,
+);
+
+$_text-weights: (
+  hint: 600,
+  default: 400,
+  subtitle: 400,
+  heading: 400,
+  title: 800,
+);
+
+$_text-heights: (
+  hint: 1rem,
+  default: 1.2rem,
+  subtitle: 1.4rem,
+  heading: 1.8rem,
+  title: 3rem,
+);

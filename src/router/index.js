@@ -4,7 +4,7 @@ import Showcase from "../views/Showcase/Showcase";
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "Showcase",
     component: Showcase,
   },
   // {

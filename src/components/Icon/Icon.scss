@@ -1,0 +1,21 @@
+@import "../../styles/typography/_typography";
+
+@each $variant in $_text_variants {
+  @include responsive(dj-icon--variant-#{$variant}) {
+    font-size: map-get($_text-sizes, $variant);
+  }
+}
+
+@each $color_name, $color in $_text_colors {
+  @include responsive(dj-icon--color-#{$color_name}) {
+    color: $color;
+  }
+}
+
+@include responsive(dj-icon--clickable) {
+  cursor: pointer;
+}
+
+@include responsive(dj-icon--spin) {
+  animation: loadingCircle 1s infinite linear;
+}

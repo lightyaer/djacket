@@ -1,0 +1,41 @@
+@import "../../styles/responsive/_responsive";
+
+@include responsive(dj-flex) {
+  display: flex;
+}
+
+$_flex_wrap: [ "nowrap", "wrap", "wrap-reverse", "inherit", "initial", "unset" ];
+$_flex_directions: [ "row", "column" ];
+$_flex_aligns: [ "start", "center", "end" ];
+$_flex_justify: [ "start", "end", "center", "between", "around", "evenly" ];
+
+@each $wrap in $_flex_wrap {
+  @include responsive(dj-flex--wrap-#{$wrap}) {
+    flex-wrap: #{$wrap};
+  }
+}
+
+@each $direction in $_flex_directions {
+  @include responsive(dj-flex--direction-#{$direction}) {
+    flex-direction: #{$direction};
+  }
+}
+
+@each $align in $_flex_aligns {
+  @include responsive(dj-flex--align-#{$align}) {
+    align-items: #{$align};
+  }
+}
+@each $justify in $_flex_justify {
+  @include responsive(dj-flex--justify-#{$justify}) {
+    justify-content: #{$justify};
+  }
+}
+
+@include responsive(dj-flex--grow) {
+  flex-grow: 1;
+}
+
+@include responsive(dj-flex--no-shrink) {
+  flex-shrink: 1;
+}

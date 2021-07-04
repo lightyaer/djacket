@@ -1,30 +1,19 @@
-<template>
-  <div>
-    <h1>Hello World!, This is the new place to be.</h1>
-    <h2>Hello World!, This is the new place to be.</h2>
-    <h3>Hello World!, This is the new place to be.</h3>
-    <h4>Hello World!, This is the new place to be.</h4>
-    <h5>Hello World!, This is the new place to be.</h5>
-    <h6>Hello World!, This is the new place to be.</h6>
-    <p>Hello World!, This is the new place to be.</p>
-    <span>Hello World!, This is the new place to be.</span>
+<script>
+import "material-design-icons/iconfont/material-icons.css";
 
-    <ul>
-      <li>Option 1</li>
-      <li>Option 2</li>
-      <li>Option 3</li>
-    </ul>
-  </div>
+export default {
+  components: {},
+};
+</script>
+<template>
+  <router-view />
 </template>
 
 <style lang="scss">
 @import "../styles/fonts/_fonts.css";
-@import "../styles/reset/_reset.css";
 @import "../_dj-index";
 
-#app {
-  font-family: WorkSans, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+$material-icons-font-path: "./" !default;
+$material-icons-font-size: 24px !default;
+$material-icons-font-display: block !default;
 </style>

@@ -1,0 +1,10 @@
+@import "../../styles/responsive/_responsive";
+
+$_positions: [ "absolute", "relative", "unset", "fixed", "sticky", "initial",
+  "inherit", ];
+
+@each $position in $_positions {
+  @include responsive(dj-position--#{$position}) {
+    position: #{$position};
+  }
+}

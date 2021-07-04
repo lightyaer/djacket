@@ -1,19 +1,18 @@
 import { computed } from "vue";
+import makeResponsive from "../makeResponsive";
 import "./Flex.scss";
 
 export default (props) => {
   return {
     flexClasses: computed(() => {
       return [
-        "dj-flex",
-        {
-          [`dj-flex--direction-${props.direction}`]: props.direction,
-          [`dj-flex--flex-wrap-${props.wrap}`]: props.wrap,
-          [`dj-flex--align-${props.align}`]: props.align,
-          [`dj-flex--justify-${props.justify}`]: props.justify,
-          "dj-flex--grow": props.grow,
-          "dj-flex--no-shrink": props.noShrink,
-        },
+        makeResponsive("dj-flex", true),
+        makeResponsive("dj-flex--direction-", props.direction),
+        makeResponsive("dj-flex--wrap-", props.wrap),
+        makeResponsive("dj-flex--justify-", props.justify),
+        makeResponsive("dj-flex--align-", props.align),
+        makeResponsive("dj-flex--grow", props.grow),
+        makeResponsive("dj-flex--no-shrink", props.shrink),
       ];
     }),
   };

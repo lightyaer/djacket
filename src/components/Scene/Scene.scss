@@ -1,0 +1,6 @@
+@import "../../styles/colors/_colors";
+@import "../../styles/responsive/_responsive";
+
+@include responsive(dj-scene) {
+  background: $_black-color;
+}

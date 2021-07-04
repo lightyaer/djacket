@@ -1,0 +1,10 @@
+@import "../../styles/typography/_typography";
+
+.dj-input {
+  background: $_primary-color;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.2rem;
+  color: white;
+}
